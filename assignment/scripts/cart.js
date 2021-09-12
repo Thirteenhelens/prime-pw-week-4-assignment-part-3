@@ -76,7 +76,8 @@ console.log('isFull (for redundancy)- should return true:', isFull());
 //3. Update the required `addItem` function to: Use the `isFull` function to prevent more than
 // `maxItems` from being added to the basket. If an item was added to the array, return `true`
 // If there was no room and the item could not be added return `false`
-basket = [];
+
+/* basket = [];
 
 function addItem ( item ) {
   if (isFull() === false) {
@@ -90,26 +91,30 @@ function addItem ( item ) {
 console.log(`Basket is ${basket}`);
 console.log('Adding apples - should be true:', addItem('apples'));
 console.log(`Basket is now ${basket}`);
-
-
-/* switch (isFull()) {
-  default:
-    console.log('Please add an item to the basket.');
-  break;
-  case false:
-    basket.push(item);
-      return true;
-  break;
-  case true:
-    return false;
-  break;
-}
 */
+
+// I have literally no clue how to do the above problem, this was my best effort.
+// (I also tried a switch statment but kept running into 'cannot reference maxItems before initialization')
+// Any pointers?
 
 // 4. Create a function called `removeItem`. It should: Take an input parameter for a string `item`
 // Use [Array.indexOf] to find the index of the first matching item in the basket,
 // Use [Array.splice] to remove the first matching item from the basket,
 // and Return the item removed or `null` if the item was not found.
-  function removeItem ( item ) {
-    
+const removeTestArray = ['arm', 'leg', 'finger', 'nose', 'eyes'];
+
+function removeItem ( item ) {
+  if ( removeTestArray.indexOf(item) === -1 ){
+    console.log("Item isn't in there :( ");
+    return null;
+  } else {
+    console.log("Item is in there :) ");
+    removeTestArray.splice( removeTestArray.indexOf(item), 1 );
+  return item;
   }
+}
+
+console.log('removeItem test, should return finger:', removeItem('finger'));
+console.log('Testing if it was removed, it should be:', removeTestArray);
+console.log('removeItem test, should return null:', removeItem('knee'));
+console.log("Testing if it was removed, it shouldn't be:", removeTestArray);
