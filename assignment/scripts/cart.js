@@ -1,7 +1,7 @@
 console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
-
+const maxItems = 5
 // Create a global variable named `basket` and set it to an empty array.
 let basket = [];
 
@@ -52,7 +52,7 @@ console.log('empty - should be empty:', empty(basket));
 
 //Stretch Goals:
 // 1. Add a global `const` named `maxItems` and set it to 5.
-const maxItems = 5
+
 
 console.log('maxItems - should be 5:', maxItems);
 
@@ -77,7 +77,7 @@ console.log('isFull (for redundancy)- should return true:', isFull());
 // `maxItems` from being added to the basket. If an item was added to the array, return `true`
 // If there was no room and the item could not be added return `false`
 
-/* basket = [];
+basket = [];
 
 function addItem ( item ) {
   if (isFull() === false) {
@@ -88,10 +88,10 @@ function addItem ( item ) {
   }
 }
 
-console.log(`Basket is ${basket}`);
-console.log('Adding apples - should be true:', addItem('apples'));
-console.log(`Basket is now ${basket}`);
-*/
+console.log('Basket is:', basket);
+//console.log('Adding apples - should be true:', addItem('apples'));
+//console.log(`Basket is now ${basket}`);
+
 
 // I have literally no clue how to do the above problem, this was my best effort.
 // (I also tried a switch statment but kept running into 'cannot reference maxItems before initialization')
